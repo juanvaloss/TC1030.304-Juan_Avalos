@@ -11,3 +11,6 @@ Decidi que la clase Autoparte use compocisión hacia la clase "Refaccionaria" ya
 
 ## Funcionalidad
 El programa servirá para poder crear el inventario para 1 refaccionaria, no se puede borrar la refaccionaria y utilizar su inventario en otra. Esto no es posible ya que la refaccionaria esta compuesta por el inventario. Sin la refaccionaria no hay inventario. Otra limitacion es que solo se podran agregar al inventario refacciones que contengan los atributos de la clase "Autoparte" o tambien motores, cabezas y transmisiones. Esto es debido a que estas ya son las clases que estaran definidas en el programa, si se quiere agregar otras refacciones que tengan mas atributos que la clase "Autoparte", se tendra que programar su clase, añadirla al main y modificar el programa para que acepte esta.
+
+## Funcionalidad
+Para que corra este proyecto se tiene que descargar los archivos "Autoparte.h", "Refaccionaria.h" y "main_proyecto.cpp"en un mismo directorio para que funcione.
