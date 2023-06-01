@@ -10,34 +10,35 @@ using namespace std;
 class Refaccionaria {
 
     private:
-        vector<Autoparte> autopartes;
-        int numAutopartes;
-        float valorTotal;
+        vector<Autoparte*> inventario;
 
     public:
         Refaccionaria() {}
 
-        vector<Autoparte> get_autopartes() {
-            return autopartes;
-        }
-        int get_numAutopartes(){ return numAutopartes;}
-		float get_valorTotal(){ return valorTotal;}      
-        
-        void set_numAutopartes(int autop);
-		void set_valorTotal(float val);
+        vector<Autoparte*> get_autopartes() {
+            return inventario;
+        }     
 
         void desplegarInventario();
-        void buscarAutoparte(Autoparte autop);
-        void agregarAutoparte(Autoparte autop);
-        void eliminarAutoparte(Autoparte autop);
+        void agregarAutoparte(Autoparte* autop);
 
 };
 
-void Refaccionaria::set_numAutopartes(int autop){
-	numAutopartes =  autop;
-}
-void Refaccionaria::set_valorTotal(float val){
-	valorTotal =  val;
+void Refaccionaria:: desplegarInventario() {          
+
+            cout << " " << endl ;
+            cout << "Inventario de la Refaccionaria:" << endl ;
+
+            for(int i = 0; i < inventario.size(); i++) {
+                inventario[i]->printData();
+                cout << " " << endl;
+                cout << " " << endl;
+            }
+
+        } 
+
+void Refaccionaria::agregarAutoparte(Autoparte* autop) {  
+    inventario.push_back(autop);
 }
 
 #endif
