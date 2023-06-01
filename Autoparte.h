@@ -16,6 +16,7 @@ class Autoparte{
 		
 	public:
 		Autoparte(string tip, string nom, float pre, int mod, string con);
+		Autoparte(string tip, string nom, float pre);
 		
 		string get_tipoAutoparte(){ return tipoAutoparte;}
 		string get_nombre(){ return nombre;}
@@ -29,7 +30,7 @@ class Autoparte{
 		void set_modelo(int md);
 		void set_condicion(string cn);
 
-        void printData();
+        virtual void printData();
 };
 
 Autoparte::Autoparte(string tip, string nom, float pre, int mod, string con){
@@ -38,6 +39,14 @@ Autoparte::Autoparte(string tip, string nom, float pre, int mod, string con){
 	precio = pre;
 	modelo = mod;
 	condicion = con;
+}
+
+Autoparte::Autoparte(string tip, string nom, float pre){
+	tipoAutoparte = tip;
+	nombre = nom;
+	precio = pre;
+	modelo = 0;
+	condicion = "condicion desconocida";
 }
 
 void Autoparte::set_tipoAutoparte(string tp){
@@ -58,7 +67,7 @@ void Autoparte::set_condicion(string cn){
 
 void Autoparte::printData (){
     cout << " " << endl;
-    cout << "Tipo de autoparte" << tipoAutoparte << endl;
+    cout << "Tipo de autoparte:  " << tipoAutoparte << endl;
 	cout << "Nombre:  " << nombre << endl;
     cout << "Precio:  " << precio << endl;
     cout << "Modelo:  " << modelo << endl;
@@ -95,7 +104,7 @@ void Motor::set_estado(string est){
 
 void Motor :: printData (){
     cout << " " << endl;
-    cout << "Tipo de autoparte" << tipoAutoparte << endl;
+    cout << "Tipo de autoparte:  " << tipoAutoparte << endl;
 	cout << "Nombre:  " << nombre << endl;
     cout << "Precio:  " << precio << endl;
     cout << "Modelo:  " << modelo << endl;
@@ -135,7 +144,7 @@ void Cabeza::set_numValvulas(int nm){
 
 void Cabeza :: printData (){
     cout << " " << endl;
-    cout << "Tipo de autoparte" << tipoAutoparte << endl;
+    cout << "Tipo de autoparte:  " << tipoAutoparte << endl;
 	cout << "Nombre:  " << nombre << endl;
     cout << "Precio:  " << precio << endl;
     cout << "Modelo:  " << modelo << endl;
@@ -175,7 +184,7 @@ void Transmision::set_tipoTransmision(string tipT){
 
 void Transmision :: printData (){
     cout << " " << endl;
-    cout << "Tipo de autoparte" << tipoAutoparte << endl;
+    cout << "Tipo de autoparte:  " << tipoAutoparte << endl;
 	cout << "Nombre:  " << nombre << endl;
     cout << "Precio:  " << precio << endl;
     cout << "Modelo:  " << modelo << endl;
