@@ -24,7 +24,7 @@ class Autoparte{
 		string get_tipoAutoparte(){ return tipoAutoparte;}
 		string get_nombre(){ return nombre;}
 		float get_precio(){return precio;};
-		float get_modelo(){return precio;};
+		float get_modelo(){return precio;}; 
 		float get_condicion(){return precio;};
 
 		// Declaramos setters
@@ -72,18 +72,6 @@ void Autoparte::set_modelo(int md){
 void Autoparte::set_condicion(string cn){
 	condicion =  cn;
 }
-
-
-// Desarrollamos el metodo "PrintData"
-void Autoparte::printData (){
-    cout << " " << endl;
-    cout << "Tipo de autoparte:  " << tipoAutoparte << endl;
-	cout << "Nombre:  " << nombre << endl;
-    cout << "Precio:  " << precio << endl;
-    cout << "Modelo:  " << modelo << endl;
-    cout << "Condicion  " << condicion << endl;
-}
-
 
 // Creamos la clase hija "Motor" y le agregamos herencia de las clase Autoparte
 class Motor : public Autoparte{
