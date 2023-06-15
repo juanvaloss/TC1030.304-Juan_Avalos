@@ -140,22 +140,22 @@ int main() {
                 Cabeza* cabeza = new Cabeza(" ", " ", 0.0, 0, " ", 0,0);     // Aqui estamos creando un objeto de tipo "Cabeza" que despues va a ser guardado en
                                                                             // "refaccionaria" usando apuntadores y "new"
 
-                    cout << "¿Cual es el nombre de la transmision?" << endl;       // Pedimos la informacion necesaria de la cabeza
+                    cout << "¿Cual es el nombre de la cabeza?" << endl;       // Pedimos la informacion necesaria de la cabeza
                     cin >> nombreC ;
 
-                    cout << "¿Cual es el precio de la transmision?" << endl;
+                    cout << "¿Cual es el precio de la cabeza?" << endl;
                     cin >> precioC ;
 
-                    cout << "¿Cual es el modelo de la transmision" << endl;
+                    cout << "¿Cual es el modelo de la cabeza" << endl;
                     cin >> modeloC ;
 
-                    cout << "¿Cual es la condicion de la transmision?" << endl;
+                    cout << "¿Cual es la condicion de la cabeza (nueva/usada)?" << endl;
                     cin >> condicionC ;
 
-                    cout << "¿Cuantas velocidades tiene la transmision?" << endl;
+                    cout << "¿Cuantos arboles de levas tiene la cabeza?" << endl;
                     cin >> numAr ;
                     
-                    cout << "¿Cual es tipo de transmision (automatico/estandar)?" << endl;
+                    cout << "¿Cuantas valvulas tiene la 1cabeza?" << endl;
                     cin >> numVal ;
 
                     cabeza -> set_tipoAutoparte("Cabeza");                 // Ingresamos los atributos de la cabeza al objeto creado en la linea 141, esto con ayuda de los setters
